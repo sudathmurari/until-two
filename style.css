@@ -1,0 +1,37 @@
+@font-face {
+  font-family: Nunito;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url("nunito.woff2") format("woff2");
+}
+:root {
+  color-scheme: light dark;
+  --bg: #F4EFE6;
+  --ink: #1B3358;
+  --muted: #3E5270;
+  --card: #FFFFFF;
+  --line: #E7DCCA;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1B1740; --ink: #F6F3EF; --muted: #D5CEC6; --card: #241E52; --line: #3A3370; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 500 1.0625rem/1.6 Nunito, ui-rounded, "SF Pro Rounded", "Segoe UI", sans-serif;
+}
+main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem; }
+header a { display: flex; align-items: center; gap: 0.75rem; color: inherit; text-decoration: none; font-weight: 700; font-size: 1.25rem; }
+header img { width: 44px; height: 44px; }
+h1 { font-size: 2.1rem; line-height: 1.15; font-weight: 700; margin: 0 0 0.75rem; text-wrap: balance; }
+h2 { font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.4rem; }
+p, li { color: var(--muted); }
+strong { color: var(--ink); }
+a { color: inherit; }
+ul { padding-left: 1.2rem; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 1.25rem; padding: 1.1rem 1.25rem; margin: 1rem 0; }
+.lede { font-size: 1.2rem; }
+footer { margin-top: 3rem; font-size: 0.9rem; color: var(--muted); display: flex; gap: 1.25rem; flex-wrap: wrap; }
